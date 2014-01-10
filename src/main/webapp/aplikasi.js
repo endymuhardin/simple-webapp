@@ -1,9 +1,10 @@
 HaloController = function($scope){
-	$scope.email = "endy@artivisi.com"
-
-	$scope.socialNetwork = [
-		"Facebook",
-		"Twitter",
-		"Google+"
+	$scope.daftarEmail = [
+		"endy.muhardin@gmail.com"
 	];
+
+    $scope.tambahEmail = function(x){
+        $scope.daftarEmail.push(x);
+        $scope.email = "";
+    };
 }
