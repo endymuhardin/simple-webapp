@@ -19,9 +19,14 @@
         <div>
             Daftar Email : 
 
-            <ul>
-                <li ng-repeat="x in daftarEmail">{{x}}</li>
-            </ul>
+            <table border=1>
+               <tr ng-repeat="x in daftarEmail">
+                <td>{{x}}</td>
+                <td>
+                    <button ng-click="edit(x)">edit</button>
+                    <button ng-click="hapus(x)">hapus</button></td>
+               </tr>
+            </table>
         </div>
 
 
