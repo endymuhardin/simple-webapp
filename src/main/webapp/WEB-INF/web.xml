@@ -3,4 +3,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
+	<servlet>
+		<servlet-name>Halo</servlet-name>
+		<servlet-class>
+			com.muhardin.endy.servlet.HaloServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Halo</servlet-name>
+		<url-pattern>/halo</url-pattern>
+	</servlet-mapping>
+
 </web-app>
