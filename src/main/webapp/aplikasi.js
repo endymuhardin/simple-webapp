@@ -19,7 +19,7 @@ HaloController = function($scope, $http){
     }
 
     $scope.updateTanggal = function(){
-        $http.get('tanggal.json')
+        $http.get('halo')
         .success(function(data, status, headers, config){
             $scope.tanggal = data.tanggal;
         })
