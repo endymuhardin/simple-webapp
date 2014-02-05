@@ -1,4 +1,4 @@
-HaloController = function($scope){
+HaloController = function($scope, $http){
 	$scope.daftarEmail = [
 		"endy.muhardin@gmail.com"
 	];
@@ -16,5 +16,15 @@ HaloController = function($scope){
 
     $scope.edit = function(x){
         $scope.email = x;
+    }
+
+    $scope.updateTanggal = function(){
+        $http.get('tanggal.json')
+        .success(function(data, status, headers, config){
+            $scope.tanggal = data.tanggal;
+        })
+        .error(function(data, status, headers, config){
+            alert("Error : "+status);
+        });
     }
 }
