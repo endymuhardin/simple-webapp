@@ -14,5 +14,27 @@
 		<servlet-name>Halo</servlet-name>
 		<url-pattern>/halo</url-pattern>
 	</servlet-mapping>
+        
+        <servlet>
+		<servlet-name>ContohError</servlet-name>
+		<servlet-class>
+			com.muhardin.endy.servlet.ErrorServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ContohError</servlet-name>
+		<url-pattern>/oops</url-pattern>
+	</servlet-mapping>
+        
+        <error-page>
+            <error-code>404</error-code>
+            <location>/error-pages/404.html</location>
+        </error-page>
+        
+        <error-page>
+            <error-code>500</error-code>
+            <location>/error-pages/500.html</location>
+        </error-page>
 
 </web-app>
