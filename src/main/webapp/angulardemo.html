@@ -4,9 +4,20 @@
         <title>Demo AngularJS</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+
   		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
         <script src="aplikasi.js"></script>
-  
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </head>
     <body ng-app ng-controller="HaloController">
         <h1>Demo AngularJS</h1>
@@ -32,5 +43,14 @@
 
         Tanggal Server = {{tanggal}}
 
+        <hr>
+
+        <div ng-class="{'btn btn-success': success, 'btn btn-warning': warning, 'btn btn-danger': danger}">Status</div>
+
+        <hr>
+
+        <button ng-click="success = true; warning=false; danger=false;">Success</button>
+        <button ng-click="success = false; warning=true; danger=false;">Warning</button>
+        <button ng-click="success = false; warning=false; danger=true;">Danger</button>
     </body>
 </html>
