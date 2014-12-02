@@ -68,6 +68,7 @@
     </dependencies>
   
     <build>
+        <finalName>${artifactId}##${maven.build.timestamp}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -91,7 +92,6 @@
                     <stopKey>jetty</stopKey>
                 </configuration>
             </plugin>
-            
             <plugin>
               <groupId>org.codehaus.cargo</groupId>
               <artifactId>cargo-maven2-plugin</artifactId>
@@ -118,6 +118,9 @@
                       <groupId>${project.groupId}</groupId>
                       <artifactId>${project.artifactId}</artifactId>
                       <type>war</type>
+                      <properties>
+                        <context>${project.artifactId}</context>
+                      </properties>
                     </deployable>
                   </deployables>
                 </deployer>
